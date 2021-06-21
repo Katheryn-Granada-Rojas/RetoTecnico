@@ -35,8 +35,8 @@ public class JoinToday {
 
     public static final Target POSTAL_CODE = Target.the("Enter postal code").located(By.name("zip"));
 
-    public  static final Target COUNTRY = Target.the("Search and select country")
-            .located(By.xpath("//*[@id=\"regs_container\"]/div/div[2]/div/div[2]/div/form/div[1]/div[3]/div[1]/div[4]/div[2]/div/div/input[1]"));
+    //public  static final Target COUNTRY = Target.the("Search and select country")
+            //.located(By.xpath("//*[@id=\"regs_container\"]/div/div[2]/div/div[2]/div/form/div[1]/div[3]/div[1]/div[4]/div[2]/div/div/input[1]"));
 
     public static final Target BOTTOM_NEXT_DEVICES = Target.the("Click bottom next devices")
             .located(By.xpath("//*[@id=\"regs_container\"]/div/div[2]/div/div[2]/div/form/div[2]/div/a/span"));
@@ -60,6 +60,6 @@ public class JoinToday {
             .located(By.xpath("//a[@id='laddaBtn']/span"));
 
     public static final Target TEXT_CONFIRMATION = Target.the("confirm successful registration")
-            .located(By.xpath("//*[@id=\"mainContent\"]/div/div/div[1]/div/h1/font/font"));
+            .located(By.xpath("//h1[contains(text(),'Welcome to the world's largest community of freelance software testers!')]"));
 
 }

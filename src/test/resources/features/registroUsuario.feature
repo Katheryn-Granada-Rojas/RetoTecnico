@@ -7,6 +7,6 @@ Feature: User Register
   Scenario: New user registration
     Given than the user wants to register on the platform
     When the user press the Join Today button on the platform
-    | firstName | lastName  | email | month | day | year  | language  | city  | postalCode  | country | password | confirmPassword  |
-    | usuario | apellido  | kathe@gmail.com | November  | 25  | 1997  | Spanish | El Agrado  | 102030  | Colombia  |  Prueba123.  | Prueba123.  |
+    | firstName | lastName  | email | month | day | year  | language  | city  | country |postalCode  |  password | confirmPassword  |
+    | usuario | apellido  | prueeba@gmail.com | November  | 25  | 1997  | Spanish |  El Agrado  |  Colombia  |  102030  |   Prueba123.  | Prueba123.  |
     Then it should allow you to register on the platform

@@ -8,11 +8,7 @@ import net.serenitybdd.screenplay.Tasks;
 import net.serenitybdd.screenplay.actions.Click;
 import net.serenitybdd.screenplay.actions.Enter;
 import net.serenitybdd.screenplay.actions.SelectFromOptions;
-import net.serenitybdd.screenplay.actions.selectactions.SelectByIndexFromElement;
-import net.serenitybdd.screenplay.actions.selectactions.SelectByValueFromElement;
-import net.serenitybdd.screenplay.waits.Wait;
 import org.openqa.selenium.Keys;
-import org.openqa.selenium.support.ui.Select;
 
 public class Register implements Task {
     private String firstName;
@@ -24,12 +20,12 @@ public class Register implements Task {
     private String language;
     private String city;
     private String postalCode;
-    private String country;
+    //private String country;
     private String password;
     private String confirmPassword;
 
     public Register(String firstName, String lastName, String email, String month, String day, String year,
-                    String language, String city, String postalCode, String country, String password, String confirmPassword) {
+                    String language, String city, String postalCode, /*String country*/ String password, String confirmPassword) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.email = email;
@@ -39,7 +35,7 @@ public class Register implements Task {
         this.language = language;
         this.city = city;
         this.postalCode = postalCode;
-        this.country = country;
+        //this.country = country;
         this.password = password;
         this.confirmPassword = confirmPassword;
     }
@@ -47,7 +43,7 @@ public class Register implements Task {
     public static Performable onThePage(String firstName, String lastName, String email, String month, String day,
                                         String year, String language, String city, String postalCode, String country,
                                         String password, String confirmPassword) {
-        return Tasks.instrumented(Register.class,firstName,lastName,email,month,day,year,language,city,postalCode,country,
+        return Tasks.instrumented(Register.class,firstName,lastName,email,month,day,year,language,city,postalCode,/*country*/
                 password,confirmPassword);
     }
 
